@@ -6,6 +6,11 @@
 
 ![Frontend Task one hng 2023](assets/Frontend.png)
 
+## Technologies
+
+- Sass
+- Typescript
+
 ## Requirements
 
 ### Slack Name
