@@ -3,6 +3,17 @@
 @use "./variables" as *;
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
+@mixin button($color) {
+	background-color: map-get($colors, $color);
+	display: flex;
+	color: map-get($colors, "white");
+	padding-inline: px-to-rem(18px);
+	padding-block: px-to-rem(10px);
+	border-radius: px-to-rem(110px);
+	font-weight: 600;
+	gap: px-to-rem(4px);
+	box-shadow: $mini-card-shadow;
+}
 body {
 	font-family: $font-family;
 	background-color: map-get($colors, "bg");
@@ -34,6 +45,13 @@ body {
 		gap: px-to-rem(28px);
 		flex-wrap: wrap;
 
+		@include custom-media-query("mobile", 432px) {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+
 		// Sub Classes
 		h1 {
 			font-size: px-to-rem(24px);
@@ -44,4 +62,38 @@ body {
 			font-weight: 400;
 		}
 	}
+
+	.date_time {
+		display: flex;
+		margin-top: px-to-rem(36px);
+		.button {
+			@include button("blue");
+		}
+	}
+}
+
+/* Width and height of the scroll bar track */
+::-webkit-scrollbar {
+	width: 0px;
+	height: 2px;
+}
+
+/* Track background color */
+::-webkit-scrollbar-track {
+	background-color: #fcfdfff8;
+}
+
+/* Handle (thumb) of the scroll bar */
+::-webkit-scrollbar-thumb {
+	background-color: #2f1b1b63;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-ms-border-radius: 20px;
+	-o-border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background-color: #555;
 }

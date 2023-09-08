@@ -1,4 +1,5 @@
 import { man, test } from "./hell";
+import { add } from "./functions";
 
 const me: test = {
 	name: "Bazuaye",
@@ -13,8 +14,5 @@ document.addEventListener("DOMContentLoaded", () => {
 	console.log(`Dom content has loaded.
 	Javascript is running
 	`);
-	const myAry = [1, 2, 3];
-
-	console.log(myAry);
-	// Hello
+	console.log(add(3));
 });
