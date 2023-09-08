@@ -65,9 +65,13 @@ body {
 
 	.date_time {
 		display: flex;
+		justify-content: space-between;
 		margin-top: px-to-rem(36px);
 		.button {
 			@include button("blue");
+		}
+		.button2 {
+			@include button("orange");
 		}
 	}
 }
