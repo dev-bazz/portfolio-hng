@@ -8,12 +8,29 @@
 		<title>Document</title>
 		<link
 			rel="stylesheet"
-			href="./css/style.css" />
+			href="./sass/css/style.css" />
 		<script
-			src="index.js"
-			defer></script>
+			src="./ts/js/index.js"
+			defer
+			type="module"></script>
 	</head>
 	<body>
-		<h1>Hello World</h1>
+		<main class="card_profile">
+			<div class="profile--wrapper">
+				<div class="profile_details--wrapper">
+					<div class="profile_image">
+						<img
+							src="./assets/profile.png"
+							alt="clement bazuaye" />
+					</div>
+
+					<div class="profile_details">
+						<h1 data-fullName="Clement Bazuaye">Clement Bazuaye</h1>
+						<h2 class="profile-subtitle">Frontend Development: Track</h2>
+						<h2 class="profile-subtitle">Slack: @Mr B</h2>
+					</div>
+				</div>
+			</div>
+		</main>
 	</body>
 </html>

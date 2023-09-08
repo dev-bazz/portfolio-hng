@@ -1,2 +1,47 @@
 @use "./reset";
 @use "./mixins&functions" as *;
+@use "./variables" as *;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+body {
+	font-family: $font-family;
+	background-color: map-get($colors, "bg");
+	padding-inline: px-to-rem(16px);
+	min-height: 100vh;
+	min-height: 100dvh;
+}
+
+.card_profile {
+	background-color: map-get($colors, "white");
+	border-radius: px-to-rem(24px);
+	display: grid;
+	place-items: center;
+	padding: px-to-rem(16px);
+	aspect-ratio: 1.2/1;
+	max-width: px-to-rem(584px);
+	margin-inline: auto;
+	margin-top: 10dvh;
+	box-shadow: $card-shadow;
+
+	// Sub Classes
+	.profile_image {
+		width: px-to-rem(135.75px);
+	}
+	.profile_details--wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: px-to-rem(28px);
+		flex-wrap: wrap;
+
+		// Sub Classes
+		h1 {
+			font-size: px-to-rem(24px);
+		}
+		.profile-subtitle {
+			color: map-get($colors, "grey");
+			font-size: px-to-rem(14px);
+			font-weight: 400;
+		}
+	}
+}

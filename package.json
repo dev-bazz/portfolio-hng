@@ -4,6 +4,10 @@
     "sass": "^1.66.1"
   },
   "scripts": {
-    "watch-sass": "sass --watch sass/style.scss:css/style.css"
+    "watch-sass": "sass --watch sass/style.scss:sass/css/style.css",
+    "watch-ts": "tsc --watch"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
   }
 }
