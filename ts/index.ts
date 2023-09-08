@@ -1,4 +1,4 @@
-import { car, domQuantity, fish } from "./types";
+import { domQuantity } from "./types";
 
 document.addEventListener("DOMContentLoaded", () => {
 	const dayOfTheWeek = getDomElement("one", ".day") as HTMLParagraphElement;
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	// -----
 	const fullDate = formatter.split(" ");
 	console.log(fullDate[2]);
-	dayOfTheWeek.textContent = `${fullDate[2]}, ${fullDate[0]}`;
+	dayOfTheWeek.textContent = `${fullDate[2]},${fullDate[0]}`;
 
 	setInterval(getCurrentTime, 1000);
 });
@@ -42,5 +42,4 @@ function getCurrentTime() {
 	time.textContent = formattedTime;
 
 	console.log(formattedTime);
-	return formattedTime;
 }

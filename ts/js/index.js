@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // -----
     const fullDate = formatter.split(" ");
     console.log(fullDate[2]);
-    dayOfTheWeek.textContent = `${fullDate[2]}, ${fullDate[0]}`;
+    dayOfTheWeek.textContent = `${fullDate[2]},${fullDate[0]}`;
     setInterval(getCurrentTime, 1000);
 });
 function getDomElement(quantity, domItem) {
@@ -34,6 +34,5 @@ function getCurrentTime() {
     const time = getDomElement("one", ".time");
     time.textContent = formattedTime;
     console.log(formattedTime);
-    return formattedTime;
 }
 export {};

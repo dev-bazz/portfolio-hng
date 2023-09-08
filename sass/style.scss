@@ -13,6 +13,7 @@
 	font-weight: 600;
 	gap: px-to-rem(4px);
 	box-shadow: $mini-card-shadow;
+	user-select: none;
 }
 body {
 	font-family: $font-family;
@@ -44,6 +45,7 @@ body {
 		align-items: center;
 		gap: px-to-rem(28px);
 		flex-wrap: wrap;
+		user-select: none;
 
 		@include custom-media-query("mobile", 432px) {
 			flex-direction: column;
@@ -72,6 +74,19 @@ body {
 		}
 		.button2 {
 			@include button("orange");
+		}
+	}
+	.button3 {
+		@include button("black");
+		justify-content: center;
+		align-items: center;
+		padding-block: px-to-rem(18px);
+		margin-top: px-to-rem(28px);
+		&:hover {
+			cursor: pointer;
+		}
+		a {
+			color: map-get($colors, "white");
 		}
 	}
 }
