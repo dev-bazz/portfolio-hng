@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }).format(currentTime);
     // -----
     const fullDate = formatter.split(" ");
-    console.log(fullDate[2]);
     dayOfTheWeek.textContent = `${fullDate[2]}`; //?
     setInterval(getCurrentTime, 1000);
 });
@@ -33,6 +32,5 @@ function getCurrentTime() {
     }).format(currentTime);
     const time = getDomElement("one", ".time");
     time.textContent = formattedTime;
-    console.log(formattedTime);
 }
 export {};

@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// -----
 	const fullDate = formatter.split(" ");
-	console.log(fullDate[2]);
+	
 	dayOfTheWeek.textContent = `${fullDate[2]}`; //?
 
 	setInterval(getCurrentTime, 1000);
@@ -41,5 +41,5 @@ function getCurrentTime() {
 
 	time.textContent = formattedTime;
 
-	console.log(formattedTime);
+	
 }
