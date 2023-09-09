@@ -35,6 +35,10 @@ body {
 	margin-top: 10dvh;
 	box-shadow: $card-shadow;
 
+	@include custom-media-query("mobile", 432px) {
+		padding-block: px-to-rem(28px);
+	}
+
 	// Sub Classes
 	.profile_image {
 		width: px-to-rem(135.75px);
@@ -69,6 +73,10 @@ body {
 		display: flex;
 		justify-content: space-between;
 		margin-top: px-to-rem(36px);
+		@include custom-media-query("mobile", 432px) {
+			flex-direction: column;
+			gap: px-to-rem(8px);
+		}
 		.button {
 			@include button("blue");
 		}

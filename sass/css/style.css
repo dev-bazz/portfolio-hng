@@ -95,6 +95,11 @@ body {
   margin-top: 10dvh;
   box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 8px 10px -6px rgba(0, 0, 0, 0.1);
 }
+@media (max-width: 432px) {
+  .card_profile {
+    padding-block: 1.75rem;
+  }
+}
 .card_profile .profile_image {
   width: 8.484375rem;
 }
@@ -126,6 +131,12 @@ body {
   display: flex;
   justify-content: space-between;
   margin-top: 2.25rem;
+}
+@media (max-width: 432px) {
+  .card_profile .date_time {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
 .card_profile .date_time .button {
   background-color: #1e40ae;
