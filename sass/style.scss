@@ -116,3 +116,64 @@ body {
 ::-webkit-scrollbar-thumb:hover {
 	background-color: #555;
 }
+
+.animate-1 {
+	animation: reveal 1.2s ease-in forwards;
+}
+
+@for $i from 1 through 7 {
+	.animate-#{$i} {
+		animation: reveal 1.2s ease-in forwards;
+
+		@if $i == 2 {
+			opacity: 0;
+			animation: reveal 1.2s 1s ease-in forwards;
+			z-index: 1;
+		}
+		@if $i == 3 {
+			opacity: 0;
+			animation: slide-right 0.8s 1s ease-out forwards;
+		}
+		@if $i == 4 {
+			opacity: 0;
+			animation: slide-right 0.8s 1.4s ease-out forwards;
+		}
+		@if $i == 5 {
+			opacity: 0;
+			animation: slide-right 0.8s 1.9s ease-out forwards;
+		}
+		@if $i == 6 {
+			opacity: 0;
+			animation: reveal 0.8s 2.3s ease-out forwards;
+		}
+		@if $i == 7 {
+			opacity: 0;
+			animation: reveal 0.8s 2.6s ease-out forwards;
+		}
+	}
+}
+
+@keyframes reveal {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes slide-right {
+	0% {
+		opacity: 0;
+		transform: translateY(-100%);
+		filter: blur(2px);
+	}
+
+	80% {
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(0%);
+		opacity: 1;
+	}
+}
