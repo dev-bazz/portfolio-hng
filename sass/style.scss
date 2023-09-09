@@ -60,7 +60,7 @@ body {
 
 		// Sub Classes
 		h1 {
-			font-size: px-to-rem(24px);
+			font-size: px-to-rem(32px);
 		}
 		.profile-subtitle {
 			color: map-get($colors, "grey");
@@ -90,11 +90,12 @@ body {
 		align-items: center;
 		padding-block: px-to-rem(18px);
 		margin-top: px-to-rem(28px);
-		&:hover {
-			cursor: pointer;
-		}
+
 		a {
 			color: map-get($colors, "white");
+			&:hover {
+				cursor: pointer;
+			}
 		}
 	}
 }

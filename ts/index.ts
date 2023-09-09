@@ -30,7 +30,6 @@ function getDomElement(quantity: domQuantity, domItem: string) {
 }
 function getCurrentTime() {
 	const currentTime = new Date().getTime(); //?
-
 	const time = getDomElement("one", ".time") as HTMLParagraphElement;
 
 	time.textContent = `${currentTime}`;

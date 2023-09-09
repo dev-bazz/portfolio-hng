@@ -120,7 +120,7 @@ body {
   }
 }
 .card_profile .profile_details--wrapper h1 {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 .card_profile .profile_details--wrapper .profile-subtitle {
   color: #374151;
@@ -178,11 +178,11 @@ body {
   padding-block: 1.125rem;
   margin-top: 1.75rem;
 }
-.card_profile .button3:hover {
-  cursor: pointer;
-}
 .card_profile .button3 a {
   color: #fff;
+}
+.card_profile .button3 a:hover {
+  cursor: pointer;
 }
 
 /* Width and height of the scroll bar track */
