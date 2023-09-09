@@ -23,14 +23,8 @@ function getDomElement(quantity, domItem) {
     }
 }
 function getCurrentTime() {
-    const currentTime = new Date(); //?
-    const formattedTime = new Intl.DateTimeFormat("en-US", {
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-        hour12: true,
-    }).format(currentTime);
+    const currentTime = new Date().getTime(); //?
     const time = getDomElement("one", ".time");
-    time.textContent = formattedTime;
+    time.textContent = `${currentTime}`;
 }
 export {};

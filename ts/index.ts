@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// -----
 	const fullDate = formatter.split(" ");
-	
+
 	dayOfTheWeek.textContent = `${fullDate[2]}`; //?
 
 	setInterval(getCurrentTime, 1000);
@@ -29,17 +29,9 @@ function getDomElement(quantity: domQuantity, domItem: string) {
 	}
 }
 function getCurrentTime() {
-	const currentTime = new Date(); //?
-	const formattedTime = new Intl.DateTimeFormat("en-US", {
-		hour: "2-digit",
-		minute: "2-digit",
-		second: "2-digit",
-		hour12: true,
-	}).format(currentTime);
+	const currentTime = new Date().getTime(); //?
 
 	const time = getDomElement("one", ".time") as HTMLParagraphElement;
 
-	time.textContent = formattedTime;
-
-	
+	time.textContent = `${currentTime}`;
 }
