@@ -5,7 +5,10 @@
 		<meta
 			name="viewport"
 			content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<meta
+			name="description"
+			content="First HNG-X task 2023 stage one" />
+		<title>Stage 1</title>
 		<link
 			rel="stylesheet"
 			href="./sass/css/style.css" />
@@ -20,13 +23,18 @@
 				<div class="profile_details--wrapper">
 					<div class="profile_image">
 						<img
+							data-testid="slackDisplayImage"
 							src="./assets/profile.png"
-							alt="clement bazuaye" />
+							alt="Mr B" />
 					</div>
 					<div class="profile_details">
 						<h1 data-fullName="Clement Bazuaye">Clement Bazuaye</h1>
-						<h2 class="profile-subtitle">Track: Frontend Development</h2>
-						<h2 class="profile-subtitle">Slack: @Mr B</h2>
+						<h2 class="profile-subtitle">
+							Track: <span data-testid="myTrack">Frontend development</span>
+						</h2>
+						<h2 class="profile-subtitle">
+							Slack: @<span data-testid="slackUserName">Mr B</span>
+						</h2>
 					</div>
 				</div>
 				<div class="date_time">
@@ -34,22 +42,34 @@
 						<img
 							src="./assets/date.svg"
 							alt="Date " />
-						<p class="day">Friday,August 2023</p>
+						<p
+							class="day"
+							data-testid="currentDayOfTheWeek">
+							Loading...
+						</p>
 					</div>
 					<div class="time button2">
 						<img
 							src="./assets/time.svg"
 							alt="TIme " />
-						<p class="time">00:00</p>
+						<p
+							class="time"
+							data-testid="currentUTCTime">
+							00:00
+						</p>
 					</div>
 				</div>
-				<div class="github button3">
+
+				<a
+					class="github button3"
+					data-testid="“githubURL”"
+					href="https://github.com/dev-bazz/portfolio-hng">
 					<img
 						src="./assets/github.png"
-						alt=""
+						alt="github icon"
 						srcset="" />
-					<a href="https://github.com/dev-bazz/portfolio-hng">Source Code</a>
-				</div>
+					Source Code</a
+				>
 			</div>
 		</main>
 	</body>
